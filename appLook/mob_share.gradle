@@ -1,0 +1,33 @@
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    //警小宝的appkey和appscret  为了使用警小宝的短信验证
+    appKey "2e77ecd4aad54"
+    appSecret "50d1d66df7a2cdd8b33d5fede8e1d648"
+    ShareSDK {
+        //平台配置信息
+        //看吧助手单独申请的第三方的key
+        loopShare true
+        devInfo {
+            Wechat {
+                appId "wxf3fdd201b798a356"
+                appSecret "6f16b21b2916290b75c81a0abedb0b36"
+            }
+            WechatMoments {
+                appId "wxf3fdd201b798a356"
+                appSecret "6f16b21b2916290b75c81a0abedb0b36"
+            }
+            WechatFavorite {
+                appId "wxf3fdd201b798a356"
+                appSecret "6f16b21b2916290b75c81a0abedb0b36"
+            }
+
+        }
+    }
+    SMSSDK {
+        //默认使用GUI，若不使用GUI，通过以下开关关闭
+        //gui false
+        //若使用GUI的自动填充验证码功能，需打开此设置
+        //autoSMS true
+    }
+}

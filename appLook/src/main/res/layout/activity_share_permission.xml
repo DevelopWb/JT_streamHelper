@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.mine.devManager.share.sharePermission.SharePermissionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:text="基础权限"
+        android:textSize="20dp"></TextView>
+
+    <include
+        layout="@layout/recycleview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <TextView
+        android:id="@+id/save_tv"
+        style="@style/bt_style"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="保存"></TextView>
+</LinearLayout>

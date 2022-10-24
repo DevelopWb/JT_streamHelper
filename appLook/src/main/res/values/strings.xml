@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">看吧助手</string>
+    <string name="title_activity_login">登录</string>
+    <string name="work_detail_tvone">山东省临沂市河东区...</string>
+    <string name="activity_login_rl_btn">登录</string>
+    <string name="item_tvtwo">时间：</string>
+    <string name="agreement_user_xieyi">《用户协议》</string>
+    <string name="agreement_secret_xieyi">《隐私协议》</string>
+    <string name="secret_xieyi_url">https://www.kb167.com/yinsi/kbzs-yinsi.html</string>
+    <string name="user_xieyi_url">https://www.kb167.com/yinsi/kbzs-user.html</string>
+    <string name="item_btn">导航</string>
+    <string name="font_type">微软雅黑</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="care_taker_info_notice">以上为残疾人基本信息，请仔细核对。</string>
+    <string name="modify_info_notice">残疾人托养资料如搬家和联系人联系方式发生变化，可使用本编辑功能。 编辑后,需要后台审核才能生效！</string>
+    <string name="none_message">一条消息也没有</string>
+    <string name="none_record">一条记录也没有</string>
+    <string name="load_more">点击加载更多</string>
+    <string name="load_more_no_data">没有数据了</string>
+    <string name="work_detail_rlthree_tvone">详细信息：</string>
+    <string name="work_detail_rlfour_tv">分类选择</string>
+    <string name="work_detail_rlseven_btn">跟踪处理</string>
+    <string name="work_detail_rlsix_tvone">上报时间：</string>
+    <string name="work_detail_rlfive_tvone">上报地点：</string>
+    <string name="work_detail_rlfive_tvtwo">兰山区兰山小区</string>
+    <string name="work_detail_rlsix_tvtwo">2018-05-08</string>
+    <string name="protocal_notice1">我已阅读并同意《隐私协议》</string>
+    <string name="protocal_notice2">和《用户协议》</string>
+    <string name="online">在\u3000线：</string>
+    <string name="to">\u3000至\u3000</string>
+</resources>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <title>H5Player</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <body>
+            <video controls preload="none" width="352" height="288" data-setup="{}"><source id="Video" src="http://157.122.97.214:6604/hls/1_800104_0_1.m3u8?JSESSIONID=2f6dd66c-b413-47e8-ba7f-a625bd0c3704"></video>
+    </body>
+	
+<script type="text/javascript">	
+	function xmTanUploadVideo(obj) {
+
+	    var Video = document.getElementById("Video");
+	    Video.src = obj;
+
+	}
+	$(document).ready(function() {
+	location.reload()});
+</script>	
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1D2185</color>
+    <color name="colorPrimaryDark">#1D2185</color>
+    <color name="colorAccent">#1D2185</color>
+    <color name="colorTheme">#1D2185</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#bbff0000</color>
+    <color name="black">#000000</color>
+    <color name="green_lighter">#AA00b61e</color>
+    <color name="green_lighter_more">#EBF7E7</color>
+    <color name="green">#65C445</color>
+    <color name="gray_deeper">#8B8B8B</color>
+    <color name="longin_bg_color">#EA5513</color>
+    <!--    半透明白色背景-->
+    <color name="translucence_white">#33ffffff</color>
+    <color name="translucence_white_2">#66ffffff</color>
+    <color name="gray_lighter">#33cccccc</color>
+    <color name="gray_light">#ddcccccc</color>
+    <color name="background2">#22cccccc</color>
+    <color name="gray">#cccccc</color>
+    <color name="text_default_color">#AA333333</color>
+    <color name="gray_ripple">#eeeeee</color>
+    <color name="red_pre">#ccff4444</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_title_color">#555555</color>
+    <color name="sf">#215163</color>
+    <color name="orange">#ea9518</color>
+    <color name="blue">#2B2F91</color>
+    <color name="blue_light">#2C8FFC</color>
+    <color name="blue_deeper">#2B2F91</color>
+    <color name="weather_bg">#41CCCCCC</color>
+    <color name="pop_light_blue">#DDE4F2</color>
+
+    <color name="text_gray">#707070</color>
+    <color name="text_title">#555555</color>
+    <color name="text_content">#777777</color>
+    <color name="text_label">#AAABAB</color>
+</resources>

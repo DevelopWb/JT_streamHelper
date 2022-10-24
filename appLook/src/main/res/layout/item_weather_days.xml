@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+    <TextView
+        android:id="@+id/weather_days_item_date"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今天·阴转多云"
+        android:drawablePadding="5dp"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/weather_days_item_aqi"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="10dp"
+        android:text="良"
+        android:maxLength="2"
+        android:textColor="@color/white"
+        android:background="@drawable/weather_content_trans_bg"/>
+    <TextView
+        android:id="@+id/weather_days_item_temp"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:text="23°/17°"
+        android:textSize="16dp"
+        android:gravity="right"
+        android:layout_height="wrap_content" />
+</LinearLayout>

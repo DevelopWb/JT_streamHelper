@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.juntai.look.hcb">
+
+    <permission
+        android:name="com.juntai.look.hcb.permission.JPUSH_MESSAGES"
+        android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 读取系统信息，包含系统版本等信息，用作统计 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 获取统计数据 -->
+    <!-- 鉴权所需该权限获取进程列表 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 使用步行AR导航，配置Camera权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- To auto-complete the email text field in the login form with the user_head_default's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 如果需要实时音视频通话模块，下面的权限也是必须的。否则，可以不加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+        android:name="com.juntai.look.hcb.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.juntai.dell.hcb.permission.RECEIVE_MSG" />
+
+    <application
+        android:name="com.juntai.look.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.juntai.look.homePage.addDev.nvr.CamerasOfNVRActivity"></activity>
+        <activity android:name="com.juntai.look.mine.devManager.share.shareToWechat.SetShareTimeActivity" />
+        <activity
+            android:name="com.juntai.look.mine.devManager.share.shareToWechat.ShareToWeChatActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.juntai.look.mine.devManager.devSet.VideoSetActivity" />
+        <activity android:name="com.juntai.look.mine.devManager.share.sharePermission.SharePermissionActivity" />
+        <activity android:name="com.juntai.look.mine.devManager.share.AddAccountToShareActivity" />
+        <activity
+            android:name="com.juntai.look.mine.devManager.share.SearchAccountToShareActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.juntai.look.mine.devManager.share.SharedAccountActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.juntai.look.mine.devManager.devSet.cameraType.DevTypeEditActivity" />
+        <activity android:name="com.juntai.look.mine.devManager.devSet.CameraOfNvrSetActivity" />
+        <activity android:name="com.juntai.look.homePage.mydevice.NVRDevDetailActivity" />
+        <activity android:name="com.juntai.look.homePage.mydevice.ModifyNameOrPwdActivity" />
+        <activity android:name="com.juntai.look.homePage.addDev.nvr.AddCameraOfNVRActivity" />
+        <activity android:name="com.juntai.look.mine.myShare.MyShareActivity" />
+        <activity android:name="com.juntai.look.entrance.RetrievePwdActivity" />
+        <activity android:name="com.juntai.look.homePage.mydevice.allGroup.transferDev.TransferDevActivity" />
+        <activity android:name="com.juntai.look.homePage.mydevice.allGroup.CreateGroupActivity" />
+        <activity android:name="com.juntai.look.homePage.mydevice.allGroup.selectGroup.SelectGroupActivity" />
+        <activity android:name="com.juntai.look.homePage.mydevice.allGroup.camerasOfGroup.CamerasListActivity" />
+        <activity android:name="com.juntai.look.homePage.mydevice.allGroup.GroupSetActivity" />
+        <activity android:name="com.juntai.look.mine.devManager.devSet.NvrDevSetActivity" />
+        <activity android:name="com.juntai.look.mine.devManager.devSet.CameraSetActivity" />
+        <activity android:name="com.juntai.look.homePage.addDev.nvr.AddNvrDevActivity" />
+        <activity android:name="com.juntai.look.homePage.addDev.AddNornalCameraActivity" />
+        <activity
+            android:name="com.juntai.look.homePage.addDev.AddDevActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.juntai.look.homePage.QRScanActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.juntai.look.homePage.mydevice.allGroup.AllGroupsActivity" />
+        <activity android:name="com.juntai.look.mine.myMsg.MyMsgActivity" />
+        <activity android:name="com.juntai.look.mine.ModifyPwdActivity" />
+        <activity android:name="com.juntai.look.mine.MyBaseInfoActivity" />
+        <activity android:name="com.juntai.look.mine.about.UserProtocalActivity" />
+        <activity android:name="com.juntai.look.mine.about.AboutUsActivity" />
+        <activity android:name="com.juntai.look.mine.devManager.DevManagerActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="b1c523b88ae3d7a26ae4703c19c616d7" />
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="sfci50a7sxefi" /> <!-- 融云配置   end ||| -->
+        <provider
+            android:name="com.juntai.look.uitils.MyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.juntai.look.entrance.login.SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.juntai.look.main.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="om9Rpiik6aiglF1nhFMxQ5acwOzuH4As" />
+
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.juntai.dell.hcb" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.juntai.look.entrance.regist.RegistActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.juntai.look.entrance.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.juntai.dell.hcb" />
+            </intent-filter>
+        </activity> <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":multiprocess"
+            tools:node="replace"
+            tools:replace="android:process">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service> <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.juntai.look.hcb.DataProvider"
+            android:exported="false"
+            tools:replace="android:authorities" /> <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.juntai.look.hcb.DownloadProvider"
+            android:exported="true"
+            tools:replace="android:authorities" /> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+
+                <category android:name="com.juntai.dell.hcb" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver> <!-- <receiver -->
+        <!-- android:name="cn.jpush.im.android.helpers.IMReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" /> &lt;!&ndash; Required. For publish channel feature &ndash;&gt; -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" /> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:enabled="true" /> <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <!-- <receiver -->
+        <!-- android:name="look.bean.model.MyReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.REGISTRATION" /> &lt;!&ndash; Required  用户注册SDK的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK消息的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK通知栏信息的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> &lt;!&ndash; Required  用户打开自定义通知栏的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.CONNECTION" /> &lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt; -->
+        <!-- <category android:name="look.hcb" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> &lt;!&ndash; &lt;!&ndash; User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调&ndash;&gt; &ndash;&gt; -->
+        <!-- <receiver android:name="look.MyReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" /> -->
+        <!-- <category android:name="look"></category> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- &lt;!&ndash; Required  . Enable it you can get statistics data with channel &ndash;&gt; -->
+        <!-- <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/> -->
+        <!-- <meta-data android:name="JPUSH_APPKEY" android:value="d9faf72aa589fca36ea65362" /> &lt;!&ndash;  </>值来自开发者平台取得的AppKey&ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name="me.iwf.photopicker.PhotoPickerActivity" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:theme="@style/Theme.AppCompat.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name="me.iwf.photopicker.PhotoPagerActivity" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:theme="@style/Theme.AppCompat.NoActionBar" /> -->
+        <!-- <service -->
+        <!-- android:name="com.netease.nimlib.service.NimService" -->
+        <!-- android:process=":core" /> &lt;!&ndash; 云信后台辅助服务 &ndash;&gt; -->
+        <!-- <service -->
+        <!-- android:name="com.netease.nimlib.service.NimService$Aux" -->
+        <!-- android:process=":core" /> &lt;!&ndash; 云信后台辅助服务 &ndash;&gt; -->
+        <!-- <service -->
+        <!-- android:name="com.netease.nimlib.job.NIMJobService" -->
+        <!-- android:exported="true" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE" -->
+        <!-- android:process=":core" /> &lt;!&ndash; 云信监视系统启动和网络变化的广播接收器，保持和 NimService 同一进程 &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name="com.netease.nimlib.service.NimReceiver" -->
+        <!-- android:exported="false" -->
+        <!-- android:process=":core"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> &lt;!&ndash; 云信进程间通信 Receiver &ndash;&gt; -->
+        <!-- <receiver android:name="com.netease.nimlib.service.ResponseReceiver" /> &lt;!&ndash; 云信进程间通信service &ndash;&gt; -->
+        <!-- <service android:name="com.netease.nimlib.service.ResponseService" /> &lt;!&ndash; 云信进程间通信provider &ndash;&gt; -->
+        <!-- &lt;!&ndash; android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 &ndash;&gt; -->
+        <!-- <provider -->
+        <!-- android:name="com.netease.nimlib.ipc.NIMContentProvider" -->
+        <!-- android:authorities="look.hcb.ipc.provider" -->
+        <!-- android:exported="false" -->
+        <!-- android:process=":core" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.videogo.main.EzvizWebViewActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.juntai.look.homePage.weather.WeatherActivity"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name="com.juntai.look.homePage.weather.SelectLocationForWeatherActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.juntai.look.homePage.search.SearchActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.juntai.look.homePage.camera.ijkplayer.PlayerLiveActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <service android:name="com.juntai.look.homePage.camera.ijkplayer.KeepAliveService" />
+    </application>
+
+</manifest>

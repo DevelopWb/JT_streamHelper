@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.mine.devManager.share.SharedAccountActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/sp_filled_gray"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.5"
+            android:padding="5dp"
+            android:src="@mipmap/search_black"></ImageView>
+
+        <TextView
+            android:id="@+id/search_users_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="搜索用户名或账号"></TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/added_users_tv"
+        style="@style/item_title_style"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:text="已添加"></TextView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/added_users_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"></android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/cancel_share_tv"
+        style="@style/bt_style"
+        android:layout_gravity="center"
+        android:text="取消分享"></TextView>
+</LinearLayout>

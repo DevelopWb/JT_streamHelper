@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp">
+
+    <TextView
+        android:id="@+id/user_phone_tv"
+        style="@style/item_title_style"
+        android:inputType="phone"
+        android:paddingLeft="15dp"
+        android:maxLength="11"
+        android:text="1231334654646"></TextView>
+
+    <TextView
+        android:id="@+id/user_name_tv"
+        style="@style/item_title_style"
+        android:layout_marginLeft="10dp"
+        android:text="名称"></TextView>
+
+    <TextView
+        android:id="@+id/operate_user_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="添加"
+        android:paddingRight="20dp"
+        android:gravity="center|right"></TextView>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.juntai.look.mine.ModifyPwdActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/stroke_gray_square_bg"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/regist_tag_style"
+                android:src="@mipmap/regist_tag_check_code" />
+
+            <EditText
+                android:id="@+id/older_pwd_et"
+                style="@style/login_edit_tv_style"
+                android:background="@null"
+                android:hint="请输入原密码"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <View style="@style/divider_style"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/regist_tag_style"
+                android:src="@mipmap/regist_tag_pwd" />
+
+            <EditText
+                android:id="@+id/newest_pwd_et"
+                style="@style/login_edit_tv_style"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入新密码"
+                android:maxLength="6" />
+
+
+        </LinearLayout>
+
+        <View style="@style/divider_style"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/regist_tag_style"
+                android:src="@mipmap/regist_tag_pwd" />
+
+            <EditText
+                android:id="@+id/newest_pwd_again_et"
+                style="@style/login_edit_tv_style"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="再输入新密码"
+                android:maxLength="6" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="提交"
+        android:id="@+id/commit_modify_pwd_tv"
+        style="@style/bt_style"></TextView>
+</LinearLayout>

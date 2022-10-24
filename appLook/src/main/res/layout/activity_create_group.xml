@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.homePage.mydevice.allGroup.CreateGroupActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+
+        <TextView
+            android:id="@+id/dev_name_tv"
+            style="@style/item_title_style"
+            android:text="设备名称:"
+            app:layout_constraintLeft_toRightOf="@+id/dev_name_important_tag_tv"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <EditText
+            android:id="@+id/dev_name_et"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/stroke_blue_square_bg"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:singleLine="true"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dev_name_tv"
+            app:layout_constraintLeft_toRightOf="@+id/dev_name_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dev_name_tv"></EditText>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <TextView
+            style="@style/item_title_style"
+            android:text="选择分组图标:"></TextView>
+
+        <ImageView
+            android:id="@+id/group_bg1_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/group_bg1_press"></ImageView>
+
+        <ImageView
+            android:id="@+id/group_bg2_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/group_bg2_normal"></ImageView>
+
+        <ImageView
+            android:id="@+id/group_bg3_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/group_bg3_normal"></ImageView>
+        <ImageView
+            android:id="@+id/group_bg4_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/group_bg4_normal"></ImageView>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/creat_tv"
+        style="@style/bt_style"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:text="创建">
+
+
+    </TextView>
+</LinearLayout>

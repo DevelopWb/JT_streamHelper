@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.mine.devManager.share.AddAccountToShareActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            style="@style/item_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享账号:"></TextView>
+
+        <TextView
+            android:id="@+id/shared_account_value_tv"
+            style="@style/item_content_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="29374237492374973449"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            style="@style/item_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享时段:"></TextView>
+
+        <TextView
+            android:id="@+id/shared_time_value_tv"
+            style="@style/item_content_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="全时段"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            style="@style/item_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享权限:"></TextView>
+
+        <TextView
+            android:id="@+id/shared_permission_tv"
+            style="@style/item_content_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:drawableRight="@mipmap/right"
+            android:gravity="center|left"
+            android:paddingRight="15dp"
+           ></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_account_tv"
+        style="@style/bt_style"
+        android:layout_marginTop="40dp"
+        android:text="保存"></TextView>
+</LinearLayout>

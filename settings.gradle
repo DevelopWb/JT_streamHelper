@@ -1,0 +1,3 @@
+include ':appLook', ':module_Map', ':module_Base',
+        ':banner', ':zXingLiteLib', ':module_vedio', ':jjdxm-ijkplayer', ':timeruler', ':ruler'
+//include ':oldercaredatalib'

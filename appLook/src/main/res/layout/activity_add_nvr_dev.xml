@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.homePage.addDev.nvr.AddNvrDevActivity">
+
+    <TextView
+        style="@style/item_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="所有设备"></TextView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/nvr_child_dev_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sp_filled_green_lighter_more"
+        android:padding="10dp"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

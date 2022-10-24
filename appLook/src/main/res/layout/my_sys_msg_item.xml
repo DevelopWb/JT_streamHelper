@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_only_bottom_gray_shape_1px">
+
+
+    <ImageView
+        android:id="@+id/camera_pic_iv"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/app_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/read_tag"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/bg_msg_number"
+        app:layout_constraintBottom_toTopOf="@+id/camera_name_tv"
+        app:layout_constraintRight_toLeftOf="@+id/camera_name_tv"
+        app:layout_constraintTop_toTopOf="@+id/camera_name_tv" />
+
+    <TextView
+        android:id="@+id/camera_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="设备下线"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/camera_no_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/camera_pic_iv"
+        app:layout_constraintRight_toLeftOf="@+id/notice_time_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/notice_time_tv"
+        style="@style/item_content_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00:00"
+        android:layout_marginRight="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_name_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_name_tv"></TextView>
+
+    <TextView
+        android:id="@+id/camera_no_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:maxLines="2"
+        android:text="永恒华府"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_default_color"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="@+id/camera_name_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_name_tv" />
+
+
+</android.support.constraint.ConstraintLayout>

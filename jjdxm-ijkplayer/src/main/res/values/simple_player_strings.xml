@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ijkplayer_simple</string>
+    <string name="small_problem">出现了点小问题,稍后重试</string>
+    <string name="not_support">播放器不支持此设备</string>
+</resources>

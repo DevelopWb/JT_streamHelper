@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <TextView
+        android:id="@+id/dev_no_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:text="1323213213213213"
+        android:textColor="#000000"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:transitionName="transplace"
+        app:layout_constraintBottom_toTopOf="@+id/dev_tag_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/add_dev_tv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/dev_tag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:paddingLeft="5dp"
+        android:paddingTop="1dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="1dp"
+        android:text="摄像头"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/dev_no_tv"
+        app:layout_constraintTop_toBottomOf="@+id/dev_no_tv"></TextView>
+
+    <TextView
+        android:id="@+id/amount_of_camera_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="1dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toLeftOf="@+id/add_dev_tv"
+        android:paddingRight="5dp"
+        android:paddingBottom="1dp"
+        android:text="10个摄像头"
+        android:textColor="@color/text_default_color"
+        app:layout_constraintBottom_toBottomOf="@+id/dev_tag_tv"
+        app:layout_constraintLeft_toRightOf="@+id/dev_tag_tv"
+        app:layout_constraintTop_toTopOf="@+id/dev_tag_tv"></TextView>
+
+    <TextView
+        android:id="@+id/add_dev_tv"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/sp_blue_square_button"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="添加"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/nowlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/dangqiandiqutv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前城市或地区:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/dangqiandiqu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/dangqiandiqutv"
+            android:text="[临沂]"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nowlocation"
+        android:layout_marginTop="20dp">
+
+        <Spinner
+            android:id="@+id/firstspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/secondspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstspinner"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/thirdspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondspinner"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/fourspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thirdspinner"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/confirm"
+            style="@style/bt_style"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/thirdspinner"
+            android:text="确定"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

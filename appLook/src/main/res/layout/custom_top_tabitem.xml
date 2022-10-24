@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="30dp"
+    android:gravity="center"
+   >
+    <TextView
+        android:id="@+id/tabitem_text"
+        style="@style/tab_textview"
+        android:textSize="16dp"
+        android:singleLine="true"
+        android:textColor="@drawable/text_main_tab"
+        android:text="上报"/>
+
+    <View
+        android:id="@+id/read_tag"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/bg_msg_number"
+        android:layout_toRightOf="@+id/tabitem_text"
+        android:visibility="gone"/>
+</RelativeLayout>

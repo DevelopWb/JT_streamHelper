@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/weather_hours_item_time"
+        android:textColor="@color/translucence_white_2"
+        android:layout_width="wrap_content"
+        android:text="09:00"
+        android:textSize="12dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/weather_hours_item_temp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:text="30°"
+        android:textSize="16dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/weather_hours_item_skycon"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/weather_wind"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+    <TextView
+        android:id="@+id/weather_hours_item_wind"
+        android:text="3级"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/weather_hours_item_aqi"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="10dp"
+        android:text="良"
+        android:maxLength="2"
+        android:textColor="@color/white"
+        android:background="@drawable/weather_content_trans_bg"/>
+</LinearLayout>

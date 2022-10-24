@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.mine.devManager.share.SearchAccountToShareActivity">
+
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_content_sv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/sp_filled_gray"
+        android:imeOptions="actionSearch"
+        app:defaultQueryHint="请输入用户名或账号"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null"
+        app:searchIcon="@drawable/search_icon"
+        app:submitBackground="@null"></android.support.v7.widget.SearchView>
+
+    <TextView
+        android:id="@+id/account_tag_tv"
+        style="@style/item_title_style"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:text="账号"
+        android:visibility="gone"></TextView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/users_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

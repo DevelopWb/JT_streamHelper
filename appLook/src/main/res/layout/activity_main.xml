@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/main_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/home_page_cl"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/home_page_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_button_home_press"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_page_text"
+                style="@style/tab_textview"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:text="首页"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/home_page_image"
+                app:layout_constraintRight_toRightOf="@+id/home_page_image"
+                app:layout_constraintTop_toBottomOf="@+id/home_page_image" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_msg_number"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/home_page_image"
+                app:layout_constraintLeft_toRightOf="@+id/home_page_image"
+                app:layout_constraintRight_toRightOf="@+id/home_page_image"
+                app:layout_constraintTop_toTopOf="@+id/home_page_image" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/mode_change_cl"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/mode_change_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_button_post_press"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mode_change_text"
+                style="@style/tab_textview"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:text="模式切换"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/mode_change_image"
+                app:layout_constraintRight_toRightOf="@+id/mode_change_image"
+                app:layout_constraintTop_toBottomOf="@+id/mode_change_image" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_msg_number"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/mode_change_image"
+                app:layout_constraintLeft_toRightOf="@+id/mode_change_image"
+                app:layout_constraintRight_toRightOf="@+id/mode_change_image"
+                app:layout_constraintTop_toTopOf="@+id/mode_change_image" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/mine_cl"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/mine_image_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_button_user_press"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mine_text_tv"
+                style="@style/tab_textview"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:text="我的"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/mine_image_iv"
+                app:layout_constraintRight_toRightOf="@+id/mine_image_iv"
+                app:layout_constraintTop_toBottomOf="@+id/mine_image_iv" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_msg_number"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/mine_image_iv"
+                app:layout_constraintLeft_toRightOf="@+id/mine_image_iv"
+                app:layout_constraintRight_toRightOf="@+id/mine_image_iv"
+                app:layout_constraintTop_toTopOf="@+id/mine_image_iv" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

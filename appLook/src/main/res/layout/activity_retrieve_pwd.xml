@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.entrance.RetrievePwdActivity">
+
+    <EditText
+        android:id="@+id/phone_et"
+        style="@style/login_edit_tv_style"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLength="11"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:hint="请输入手机号"></EditText>
+
+    <EditText
+        android:id="@+id/pwd_et"
+        style="@style/login_edit_tv_style"
+        android:layout_height="50dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:hint="请输入新密码"></EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/check_code_et"
+            style="@style/login_edit_tv_style"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+            android:hint="请输入验证码"></EditText>
+
+        <TextView
+            android:id="@+id/get_check_code_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/bt_green_clicked"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="获取验证码"
+            android:textColor="@color/white"></TextView>
+
+    </LinearLayout>
+</LinearLayout>

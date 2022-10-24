@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.juntai.look.mine.devManager.devSet.VideoSetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_only_bottom_gray_shape_5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/save_local_tv"
+                style="@style/item_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本地存储"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <Switch
+                android:id="@+id/save_to_local_sv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:layout_constraintBottom_toBottomOf="@+id/save_local_tv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/save_local_tv"></Switch>
+
+            <TextView
+                style="@style/item_content_style"
+                android:text="设置录像存储到硬盘录像机或摄像头存储卡"
+                app:layout_constraintLeft_toLeftOf="@+id/save_local_tv"
+                app:layout_constraintTop_toBottomOf="@+id/save_local_tv"></TextView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/save_yun_tv"
+                style="@style/item_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="云存储"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <Switch
+                android:id="@+id/save_to_yun_sv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/save_yun_tv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/save_yun_tv"></Switch>
+
+            <TextView
+                style="@style/item_content_style"
+                android:text="设置录像存储到云端服务器，需要申请打开"
+                app:layout_constraintLeft_toLeftOf="@+id/save_yun_tv"
+                app:layout_constraintTop_toBottomOf="@+id/save_yun_tv"></TextView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/item_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="存储天数"></TextView>
+
+            <Spinner
+                android:id="@+id/saved_days_sp"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/spinner_bg"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/item_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="存储时间"></TextView>
+
+            <Spinner
+                android:id="@+id/save_time_start_sp"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/spinner_bg"></Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="--"></TextView>
+
+            <Spinner
+                android:id="@+id/save_time_end_sp"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/spinner_bg"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                style="@style/item_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重复"></TextView>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <CheckBox
+                        android:id="@+id/sunday_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="周日"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/monday_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="周一"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/tuesday_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="周二"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/wednesday_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="周三"></CheckBox>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <CheckBox
+                        android:id="@+id/thursday_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="周四"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/friday_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="周五"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="周六"></CheckBox>
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/save_config_yun_tv"
+            style="@style/bt_style"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:text="保存"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_white_only_bottom_gray_shape_5dp"></View>
+
+        <TextView
+            style="@style/item_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="录像文件远程下载"
+            android:textSize="18dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+          >
+
+            <TextView
+                style="@style/item_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始日期时间"></TextView>
+
+            <TextView
+                android:id="@+id/download_start_time_tv"
+                style="@style/item_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:text="2020-10-20 11:55"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            >
+
+            <TextView
+                style="@style/item_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束日期时间"></TextView>
+
+            <TextView
+                android:id="@+id/download_end_time_tv"
+                style="@style/item_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:text="2020-10-20 11:55"></TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/download_tv"
+            style="@style/bt_style"
+            android:layout_gravity="center"
+            android:text="发送下载指令"></TextView>
+
+        <TextView
+            style="@style/item_content_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="20dp"
+            android:text="录像文件下载前请先确认有该时间段内的文件,下载成功后,会有消息提示和下载地址"
+            android:textColor="@color/orange"></TextView>
+    </LinearLayout>
+</ScrollView>

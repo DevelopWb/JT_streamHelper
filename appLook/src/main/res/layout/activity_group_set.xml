@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.juntai.look.homePage.mydevice.allGroup.GroupSetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            style="@style/item_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分组名称:"></TextView>
+
+        <TextView
+            android:id="@+id/camera_type_tv"
+            style="@style/item_content_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:drawableRight="@mipmap/right"
+            android:drawablePadding="10dp"
+            android:gravity="center|left"
+            android:paddingRight="15dp"
+            android:text="罗庄摄像头"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            style="@style/item_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分组设备:"></TextView>
+
+        <TextView
+            android:id="@+id/devs_of_group_tv"
+            style="@style/item_content_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:drawableRight="@mipmap/right"
+            android:drawablePadding="10dp"
+            android:gravity="center|left"
+            android:paddingRight="15dp"
+            android:text="3个摄像头"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/delete_dev_tv"
+        style="@style/bt_style"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="删除分组"></TextView>
+
+
+</LinearLayout>

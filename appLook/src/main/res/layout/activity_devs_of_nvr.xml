@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.juntai.look.homePage.mydevice.NVRDevDetailActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:id="@+id/nvr_dev_amount_ll"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sp_filled_green_lighter"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/nvr_tag"></ImageView>
+
+            <TextView
+                android:id="@+id/nvr_camera_amount_tv"
+                style="@style/item_title_style"
+                android:paddingTop="0dp"
+                android:text="4个摄像头"
+                android:textColor="@color/white"
+                android:textSize="14dp"></TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nvr_dev_name_tv"
+            style="@style/item_title_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:text="fjdfkaskldjf"
+            app:layout_constraintBottom_toTopOf="@+id/nvr_dev_no_tv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toRightOf="@+id/nvr_dev_amount_ll"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"></TextView>
+
+        <TextView
+            android:id="@+id/nvr_dev_no_tv"
+            style="@style/item_content_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="324365113456"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@+id/nvr_dev_name_tv"
+            app:layout_constraintRight_toRightOf="@+id/nvr_dev_name_tv"
+            app:layout_constraintTop_toBottomOf="@+id/nvr_dev_name_tv"></TextView>
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        layout="@layout/recycleview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"></include>
+
+</LinearLayout>

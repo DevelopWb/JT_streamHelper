@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/full_screen_right_control_cl"
+    android:layout_width="180dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:background="#55000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/yun_control_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/yun_control_cl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/yun_control_bg">
+
+            <ImageView
+                android:id="@+id/control_up_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="4dp"
+                android:padding="9dp"
+                android:src="@drawable/operate_white_up"
+                app:layout_constraintBottom_toTopOf="@+id/control_stop_tv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <ImageView
+                android:id="@+id/control_left_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="4dp"
+                android:padding="9dp"
+                android:src="@drawable/operate_white_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/control_stop_tv"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <ImageView
+                android:id="@+id/control_down_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="4dp"
+                android:padding="9dp"
+                android:src="@drawable/operate_white_down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/control_stop_tv"></ImageView>
+
+            <ImageView
+                android:id="@+id/control_right_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="4dp"
+                android:padding="9dp"
+                android:src="@drawable/operate_white_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/control_stop_tv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/control_stop_tv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/operate_white_mid"
+                android:gravity="center"
+                android:text="stop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/zoom_out_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@mipmap/put_in_white"></ImageView>
+
+            <ImageView
+                android:id="@+id/zoom_in_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@mipmap/put_out_white"></ImageView>
+
+            <ImageView
+                android:id="@+id/collect_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@mipmap/collect_white"></ImageView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:id="@+id/cut_pic_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:src="@mipmap/capture_white"></ImageView>
+
+
+            <ImageView
+                android:id="@+id/record_iv"
+                android:layout_width="28dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:src="@mipmap/record_white"></ImageView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/full_screen_right_more_cl"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#55000000"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/full_screen_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:text="更多"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <ImageView
+            android:id="@+id/full_screen_share_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="55dp"
+            android:padding="5dp"
+            android:src="@mipmap/full_screen_share"
+            app:layout_constraintEnd_toStartOf="@+id/full_screen_set_iv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/full_screen_title_tv"></ImageView>
+
+        <TextView
+            android:id="@+id/full_screen_share_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享微信"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/full_screen_share_iv"
+            app:layout_constraintRight_toRightOf="@+id/full_screen_share_iv"
+            app:layout_constraintTop_toBottomOf="@+id/full_screen_share_iv"></TextView>
+
+        <ImageView
+            android:id="@+id/full_screen_set_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@mipmap/full_screen_set"
+            app:layout_constraintBottom_toBottomOf="@+id/full_screen_share_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/full_screen_share_iv"
+            app:layout_constraintTop_toTopOf="@+id/full_screen_share_iv"></ImageView>
+
+        <TextView
+            android:id="@+id/full_screen_set_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/full_screen_set_iv"
+            app:layout_constraintRight_toRightOf="@+id/full_screen_set_iv"
+            app:layout_constraintTop_toBottomOf="@+id/full_screen_set_iv"></TextView>
+
+        <TextView
+            android:id="@+id/full_screen_visit_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="访问量"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/full_screen_share_tv"
+            app:layout_constraintTop_toBottomOf="@+id/full_screen_share_tv"></TextView>
+
+        <TextView
+            android:id="@+id/full_screen_online_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/online"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/full_screen_visit_amount_tv"
+            app:layout_constraintTop_toBottomOf="@+id/full_screen_visit_amount_tv"></TextView>
+
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
