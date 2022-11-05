@@ -33,6 +33,7 @@ import com.juntai.look.uitils.HawkProperty;
 import com.juntai.look.uitils.StringTools;
 import com.juntai.wisdom.basecomponent.mvp.BaseIView;
 import com.juntai.wisdom.bdmap.service.LocateAndUpload;
+import com.mob.MobSDK;
 import com.orhanobut.hawk.Hawk;
 
 import java.util.List;
@@ -92,6 +93,7 @@ public class MainActivity extends UpdateActivity<MainPresent> implements SearchF
         mMineTextTv = (TextView) findViewById(R.id.mine_text_tv);
         mMineCl = (ConstraintLayout) findViewById(R.id.mine_cl);
         mMineCl.setOnClickListener(this);
+        MobSDK.submitPolicyGrantResult(true);
 
     }
 

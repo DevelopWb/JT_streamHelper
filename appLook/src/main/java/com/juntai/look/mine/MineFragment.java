@@ -111,10 +111,11 @@ public class MineFragment extends BaseAppFragment<MinePresent> implements MineCo
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        RxTaskManager.doTask((MainActivity) getActivity(), new RxTask<String>("清理成功") {
+                                        RxTaskManager.doTask((MainActivity) getActivity(), new RxTask<String>() {
                                             @Override
-                                            public void doOnIoThread() {
+                                            public String doOnIoThread() {
                                                 FileCacheUtils.clearAll(mContext.getApplicationContext());
+                                                return "清理成功";
                                             }
 
                                             @Override

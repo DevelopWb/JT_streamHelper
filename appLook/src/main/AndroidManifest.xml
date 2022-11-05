@@ -90,6 +90,7 @@
         <activity android:name="com.juntai.look.mine.devManager.devSet.CameraSetActivity" />
         <activity android:name="com.juntai.look.homePage.addDev.nvr.AddNvrDevActivity" />
         <activity android:name="com.juntai.look.homePage.addDev.AddNornalCameraActivity" />
+        <activity android:name="com.juntai.look.mine.devManager.share.ShareActivity" />
         <activity
             android:name="com.juntai.look.homePage.addDev.AddDevActivity"
             android:launchMode="singleTask" />

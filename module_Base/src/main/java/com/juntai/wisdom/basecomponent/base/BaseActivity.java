@@ -2,6 +2,7 @@ package com.juntai.wisdom.basecomponent.base;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -83,7 +84,16 @@ public abstract class BaseActivity extends RxAppCompatActivity implements Toolba
     private TextView titleName, titleRightTv;
     private boolean autoHideKeyboard = true;
     public FrameLayout frameLayout;
+    public static String BASE_PARCELABLE = "parcelable";//请求的回执
+    public static String BASE_ID = "baseId";//请求的回执
+    public static String BASE_ID2 = "baseId2";//请求的回执
+    public static String BASE_STRING = "baseString";//
+    public static String BASE_STRING2 = "baseString2";//
+    public static String BASE_STRING3 = "baseString3";//
 
+    protected int page = 1; //当前页码
+    //每次展示20条数据
+    protected int limit = 10;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,7 +132,31 @@ public abstract class BaseActivity extends RxAppCompatActivity implements Toolba
             EventManager.getEventBus().register(this);//注册
         }
     }
-
+    /**
+     * 实现文本复制功能
+     *
+     * @param content
+     */
+    public void copy(String content) {
+// 得到剪贴板管理器
+        ClipboardManager cmb = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        cmb.setText(content.trim());
+        ToastUtils.toast(mContext, "已复制");
+    }
+    /**
+     * 获取文件名称
+     *
+     * @return
+     */
+    public String getSavedFileName(String content) {
+        if (TextUtils.isEmpty(content)) {
+            return null;
+        }
+        if (content.contains("/")) {
+            content = content.substring(content.lastIndexOf("/") + 1, content.length());
+        }
+        return content;
+    }
     @Override
     protected void onStop() {
         super.onStop();

@@ -1,15 +1,19 @@
 package com.juntai.wisdom.basecomponent.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Environment;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.cache.ExternalCacheDiskCacheFactory;
 import com.juntai.wisdom.basecomponent.app.BaseApplication;
+import com.juntai.wisdom.basecomponent.mvp.BaseIView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -32,7 +36,27 @@ public class FileCacheUtils {
     public static  String  STREAM_THUMBNAIL = "streamThumbnail";//流媒体缩略图目录
     public static  String  STREAM_CAPTURE = "摄像头截图/";//流媒体截图目录
 
+    /**
+     * 获取app文件地址
+     * isCatch  是否是缓存
+     *
+     * @return
+     */
+    public static String getAppPath(boolean isCatch) {
+        File destDir = null;
+        if (isCatch) {
+            destDir = new File(BaseApplication.app.getExternalCacheDir().getPath() +
+                    File.separator + BaseAppUtils.getAppName());
+        } else {
+            destDir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +
+                    File.separator + BaseAppUtils.getAppName());
+        }
 
+        if (!destDir.exists()) {
+            destDir.mkdirs();
+        }
+        return destDir.getAbsolutePath() + "/";
+    }
 
     /**
      * 获取app文件地址
@@ -69,7 +93,18 @@ public class FileCacheUtils {
         }
         return destDir.getAbsolutePath() + File.separator;
     }
-
+    /**
+     * 压缩图片存放目录
+     *
+     * @return
+     */
+    public static String getAppImagePath(boolean isCatch) {
+        File destDir = new File(getAppPath(isCatch) + "image/");
+        if (!destDir.exists()) {
+            destDir.mkdirs();
+        }
+        return destDir.getAbsolutePath() + "/";
+    }
     /**
      * 获取video缓存目录
      * @return
@@ -389,6 +424,70 @@ public class FileCacheUtils {
             }
         }
         return content;
+    }
+    /**
+     * 缓存bmp
+     *
+     * @return
+     */
+    public static void saveBitmapByView(BaseIView iView, Context context, View view, String picName) {
+        RxScheduler.doTask(iView, new RxTask<String>(){
+            @Override
+            public String doOnIoThread() {
+                view.setDrawingCacheEnabled(true);
+                view.buildDrawingCache();
+                Bitmap bmp = view.getDrawingCache();
+                FileOutputStream out;
+                File file;
+                String path = null;
+                try {
+                    // 获取SDCard指定目录下
+                    String sdCardDir = getAppImagePath(false);
+                    File dirFile = new File(sdCardDir);  //目录转化成文件夹
+                    if (!dirFile.exists()) {              //如果不存在，那就建立这个文件夹
+                        dirFile.mkdirs();
+                    }
+                    file = new File(sdCardDir, picName);
+                    out = new FileOutputStream(file);
+                    bmp.compress(Bitmap.CompressFormat.JPEG, 100, out);
+                    out.flush();
+                    out.close();
+                    path = sdCardDir + picName;
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return path;
+            }
+
+            @Override
+            public void doOnUIThread(String s) {
+                view.destroyDrawingCache();
+                sendBroadcastToAlbum(context, s);
+                ToastUtils.toast(context, "已保存到本地");
+            }
+        });
+    }
+    /**
+     * 通知系统相册更新图库
+     *
+     * @param context
+     * @param imagePath
+     */
+    public static void sendBroadcastToAlbum(Context context, String imagePath) {
+        if (context != null && imagePath != null && imagePath.length() > 0) {
+            File imageFile = new File(imagePath);
+            if (imageFile.exists()) {
+                Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                Uri uri = Uri.fromFile(imageFile);
+                if (uri != null && context != null) {
+                    intent.setData(uri);
+                    context.sendBroadcast(intent);
+                }
+            }
+        }
     }
 
 }

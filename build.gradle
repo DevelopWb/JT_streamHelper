@@ -4,7 +4,6 @@ buildscript {
     
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
         flatDir{
@@ -13,6 +12,9 @@ buildscript {
         // 1.添加MobSDK Maven地址
         maven {
             url "https://mvn.mob.com/android"
+        }
+        maven {
+            url "https://maven.aliyun.com/repository/gradle-plugin"
         }
     }
     dependencies {
@@ -20,13 +22,14 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath "com.mob.sdk:MobSDK:2018.0319.1724"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
         flatDir{
@@ -35,6 +38,9 @@ allprojects {
         // 1.添加MobSDK Maven地址
         maven {
             url "https://mvn.mob.com/android"
+        }
+        maven {
+            url "https://maven.aliyun.com/repository/gradle-plugin"
         }
     }
 }

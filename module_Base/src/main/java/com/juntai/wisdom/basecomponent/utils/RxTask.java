@@ -9,9 +9,10 @@ public abstract class RxTask<T> {
 
     private T t;
 
-    public RxTask(T t) {
-        this.t = t;
-    }
+
+    public abstract T doOnIoThread();
+
+    public abstract void doOnUIThread(T t);
 
     public T getT() {
         return t;
@@ -20,9 +21,4 @@ public abstract class RxTask<T> {
     public void setT(T t) {
         this.t = t;
     }
-
-    public abstract void doOnIoThread();
-
-    public abstract void doOnUIThread(T t);
-
 }
